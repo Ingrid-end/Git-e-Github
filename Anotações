@@ -1,0 +1,76 @@
+Open Source: Projetos de código aberto.
+  Isso quer dizer que o código será disponibilizado para o público, para que outras pessoas possam contribuir sugerindo melhorias, implementando-as, 
+  solicitando features específicas.
+  
+Issues: "problema".
+  Possível controlar as sugestões de melhorias, pedidos de novas funcionalidades, e assim por diante.
+  1) Podemos reportar problemas;
+  2) Podemos sugerir melhorias no código;
+  3) Podemos organizar quaisquer coisas que façam sentindo para o projeto.
+ *Podemos criar issues em qualquer repositório.
+
+Close Issues: Fechar a issue.
+  Indicando que o problema ja foi resolvido. (Se tiver as permissões necessarias) - podemos reabrir.
+ *Existe sempre alguem validando estas alterações.
+
+
+#Para contribuir com o projeto é preciso criar uma copia do mesmo para trabalhar nele.
+
+Fork: "Garfo".
+  Nome deste repositório copiado, que remete aos dentes de um "garfo".
+  
+
+Adicionar um repositório do GitHub
+  No GitHub -> cloner or download -> copia o link.
+    NO terminal:
+    GIT CONFIG --LOCAL USER.EMAIL "email" 
+    
+    GIT REMOTE ADD ORIGIN (link)
+
+Enviando as modificações para o dono do repositório
+  As modificações são realizadas por meio de PULL REQUESTS, um pedido de envio de modificação.
+  
+ *Confirmar isso acessando a aba PULL REQUESTS
+  Merge pull request -> confirm merge
+  
+Como acontece tudo?
+  - Alguem ou eu abre um ISSUE;
+  - Alguem ou eu ve e sabe resolver;
+  - Ou criamos um "clone" do projeto no FORK;
+  - Abrimos uma pasta para colocar o projeto;
+  - Copie a URL no CLONE OR DOWNLOAD no GitHub;
+  - Terminal, dentro da pasta feita:
+      GIT REMOTE ADD ORIGIN (url)
+      GIT PULL ORIGIN MASTER
+  - Faça uma alteração no cógido;
+  - ADD o arquivo e commita ele;
+  - Manda os commit
+      GIT PULL ORIGIN MASTER
+  *Se der erro, coloque o email : GIT CONFIG ....
+  *Se for Windows -> conta de usuario -> gerenciador de credenciais -> credenciais do windows -> GITHUB -> remover*
+  - Como mandar essas modificações para o dono?
+    Crie um NEW PULL REQUEST
+  - Com tudo ok, faça o merge.
+  
+Copia so algum commit para outra branch
+    Copia o hash do commit desejado;
+    no branch certo:
+      GIT CHERRY-PICK (hash)
+
+Encontrar determinado ponto no historico GIT:
+      GIT BISECT START
+  inicializara a busca do lado do GIT;
+  é preciso informar a ele um estado, ou commit cuja parte do código queira mudar. Ex: Titulo.
+      GIT BISECT BAD HEAD
+  depois informamos o estado em que estava bom, a parte onde ira buscar o commit desejado.
+  copia a hash do commit "certo"
+      GIT BISECT GOOD (hash)
+  para finalizar a busca
+      GIT BISECT RESET
+
+
+Ver quem é o responsavel por cada linha do código:
+      GIT BLAME (arquivo)
+ 
+    
+ 
